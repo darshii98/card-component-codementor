@@ -1,0 +1,251 @@
+/* ///////////////////////////////////////////////// */
+/* ////////////////INIT////////////////// */
+/* //////////////////////////////////////////////// */
+:root {
+  --primary-dk: hsl(233, 47%, 7%);
+  --primary-ltr: hsl(244, 38%, 16%);
+  --primary-lt: hsl(277, 64%, 61%);
+  --secondary-white-lt: hsl(0, 0%, 100%);
+  --secondary-trans-white-ltr: hsla(0, 0%, 100%, 0.75);
+  --secondary-trans-white-lt: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.container {
+  min-height: 97vh;
+  padding: 12rem 1rem;
+  display: flex;
+  align-items: center;
+  background: var(--primary-dk);
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////CARD TEXT COMPONENT////////////////// */
+/* //////////////////////////////////////////////// */
+.card {
+  display: flex;
+  border-radius: 10px;
+  background: var(--primary-ltr);
+}
+
+.details {
+  padding: 4.5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.insights {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.insights h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.1rem;
+  color: var(--secondary-white-lt);
+}
+
+.insights span {
+  color: var(--primary-lt);
+}
+
+.insights p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  line-height: 1.3rem;
+  margin-right: 3rem;
+  color: var(--secondary-trans-white-lt);
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+}
+
+.stats li h2 {
+  font-family: "Inter", sans-serif;
+  color: var(--secondary-white-lt);
+}
+
+.stats li p {
+  text-transform: uppercase;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 13px;
+  margin-right: 3.5rem;
+  margin-top: 0.2rem;
+  color: var(--secondary-trans-white-lt);
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////CARD IMAGE COMPONENT////////////////// */
+/* //////////////////////////////////////////////// */
+.side-image {
+  width: 50%;
+  height: 27rem;
+  background: linear-gradient(rgba(110, 4, 172, 0.5), rgba(110, 4, 172, 0.5)),
+    url("images/image-header-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////FOOTER////////////////// */
+/* //////////////////////////////////////////////// */
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-ltr);
+  color: var(--secondary-trans-white-lt);
+  height: 3vh;
+}
+
+.author {
+  text-decoration: none;
+  color: var(--secondary-white-lt);
+}
+
+.author:active,
+.author:hover {
+  color: var(--secondary-trans-white-ltr);
+}
+
+/* ///////////////////////////////////////////////// */
+/* ////////////////MEDIA QUERIES////////////////// */
+/* //////////////////////////////////////////////// */
+
+@media only screen and (max-width: 980px) {
+  .details {
+    padding: 3rem;
+  }
+
+  .side-image {
+    height: 24rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .details {
+    padding: 2rem;
+  }
+
+  .side-image {
+    height: 22rem;
+  }
+
+  .insights h1 {
+    font-size: 1.9rem;
+  }
+  .insights p {
+    font-size: 13px;
+  }
+  .stats li h2 {
+    font-size: 1.2rem;
+  }
+  .stats li p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .details {
+    padding: 1rem;
+  }
+
+  .side-image {
+    height: 20rem;
+  }
+
+  .insights h1 {
+    font-size: 1.8rem;
+  }
+  .insights p {
+    font-size: 12px;
+  }
+  .stats li h2 {
+    font-size: 1.1rem;
+  }
+  .stats li p {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    width: 300px;
+  }
+
+  .container {
+    overflow: hidden;
+    flex-direction: column;
+    padding: 12rem 0.2rem;
+  }
+
+  .side-image {
+    height: 240px;
+    width: 300px;
+  }
+  .details {
+    width: 100%;
+    height: 65%;
+    align-items: center;
+    padding: 1.8rem;
+  }
+  .insights {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .insights p {
+    margin-right: 0;
+    margin-top: 1rem;
+    font-size: 13px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats li {
+    text-align: center;
+  }
+
+  .stats li p {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .side-image {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
+  .author {
+    font-size: 10px;
+  }
+}
